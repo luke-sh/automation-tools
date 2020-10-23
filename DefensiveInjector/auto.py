@@ -29,8 +29,10 @@ injector:
 	makefile.close()
 
 def writeasm(build):
-	if (build == "2004"):
+	if (build == "2004" or build == 2004):
 		version = "0xc1"
+	elif (build == "1909" or build == 1909):
+		version = "0xbd"
 	else:
 		version = "0xbd"
 	mainasm = open("syscalls.asm", "w+")
